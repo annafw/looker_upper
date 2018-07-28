@@ -20,11 +20,13 @@ The looker_upper app answers the question:
 
 ## Run
 
-To run the server:
+To run the server: 
 
-```
-python manage.py runserver
-```
+    start.sh
+
+Alternatively, you can run the server via this Python command:
+
+    python manage.py runserver
 
 ## Design
 
