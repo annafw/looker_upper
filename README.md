@@ -1,5 +1,33 @@
 # looker_upper
 
+The looker_upper app answers the question:
+
+    Is this product safe for me to use?
+
+
+## Tech Stack
+
+* Python 3
+* Django
+* Sqlite3
+
+## Setup
+
+* Download this repository.
+* To activate this project's virtualenv, run pipenv shell.
+* Alternatively, run a command inside the virtualenv with pipenv run.
+* Run database migrations: `python3 manage.py migrate`
+
+## Run
+
+To run the server:
+
+```
+python manage.py runserver
+```
+
+## Design
+
 Look up what I want. Tell me if this product is safe or if it's gonna make my skin so super sad.
 
 Here's what it's about:
@@ -16,3 +44,11 @@ Here's what it's about:
 
 * Misspellings of ingredients. Maybe get similar names?
 * Product ingredient updates. Maybe this database isn't reliable?
+
+## First Steps
+
+1. Enter product name, get list of ingredients back
+   POST /ingredients { product_name: NAME }
+
+2. Add UI to enter product name
+
