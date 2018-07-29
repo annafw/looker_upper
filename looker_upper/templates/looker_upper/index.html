@@ -1,9 +1,8 @@
-{% if latest_question_list %}
-    <ul>
-    {% for question in latest_question_list %}
-        <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}
+<h1>look it up!</h1>
+
+<h2>Enter a product name to list the ingredients:</h2>
+<form action="{% url 'looker_upper:find' %}" method="get">
+{% csrf_token %}
+    <input type="search" name="product_to_find">
+    <input type="submit" value="Find ingredients">
+</form>
